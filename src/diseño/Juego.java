@@ -99,7 +99,7 @@ public class Juego extends javax.swing.JFrame {
     private void pregwin() {
         if(!btnC1.isEnabled() && !btnC2.isEnabled() && !btnC3.isEnabled() && !btnC4.isEnabled() && !btnC5.isEnabled() && !btnC6.isEnabled() && 
                 !btnC7.isEnabled() && !btnC8.isEnabled()) {
-            JOptionPane.showMessageDialog(this, "Felicidades, usted ha ganado. Su puntaje es: "+puntaje, "Win!!", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Juego terminado. Su puntaje es: "+puntaje, "Ganador!!", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     
