@@ -4,7 +4,7 @@
  */
 package diseño;
 
-import Logica.LogicaJuego;
+import Logica.principal;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
  *
  * @author Dark
  */
-public class PlayGame extends javax.swing.JFrame {
+public class Juego extends javax.swing.JFrame {
 
-    private VFondo fondo;
-    private LogicaJuego log = new LogicaJuego();
+    private fondoJuego fondo;
+    private principal log = new principal();
     private boolean caraUp = false;
     private ImageIcon im1;
     private ImageIcon im2;
@@ -25,10 +25,10 @@ public class PlayGame extends javax.swing.JFrame {
     private boolean primerc = false;
     private int puntaje = 0;
     
-    public PlayGame() {
+    public Juego() {
         initComponents();
         
-        fondo = new VFondo(getWidth(), getHeight());
+        fondo = new fondoJuego(getWidth(), getHeight());
         add(fondo, BorderLayout.CENTER);
         setCards();
     }       
@@ -89,7 +89,8 @@ public class PlayGame extends javax.swing.JFrame {
         btnC7.setEnabled(true);
         btnC8.setEnabled(true);
         
-        
+        log = new principal();
+        setCards();
         primerc = false;
         caraUp = false;
         puntaje = 0;
@@ -445,7 +446,7 @@ public class PlayGame extends javax.swing.JFrame {
 
     private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
         reiniciar();
-        log = new LogicaJuego();
+        log = new principal();
         setCards();
     }//GEN-LAST:event_btnReiniciarActionPerformed
 
@@ -464,20 +465,21 @@ public class PlayGame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PlayGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PlayGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PlayGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PlayGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Juego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PlayGame().setVisible(true);
+                new Juego().setVisible(true);
             }
         });
     }

@@ -12,12 +12,12 @@ import javax.swing.ImageIcon;
  *
  * @author Dark
  */
-public class VFondo extends javax.swing.JPanel {
+public class fondoJuego extends javax.swing.JPanel {
 
     /**
      * Creates new form VFondo
      */
-    public VFondo(int w, int h) {
+    public fondoJuego(int w, int h) {
         initComponents();
         
         setSize(w, h);

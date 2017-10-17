@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author Dark
  */
-public class LogicaJuego {
+public class principal {
     //Funcion que ordena aleatoriamente las cartas al ejecutar el programa
     public int[] getCardNumbers() {
         //arreglo que contrendra 4 pares de cartas para un total de 8

@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author Dark
  */
-public class NewMain {
+public class main {
 
     /**
      * @param args the command line arguments
